@@ -22,7 +22,7 @@ public class SalaryCalculator {
         double netSalary = salary - taxes;
 
         // Print the net salary
-        System.out.println("Net salary: " + netSalary);
+        System.out.println(netSalary);
     }
 }
 
