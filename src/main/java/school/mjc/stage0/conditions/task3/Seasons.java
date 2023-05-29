@@ -1,7 +1,5 @@
 package school.mjc.stage0.conditions.task3;
 
-import java.util.Scanner;
-
 public class Seasons {
     public static void tellTheSeasonByMonthNumber(int month) {
         if (month == 12) {

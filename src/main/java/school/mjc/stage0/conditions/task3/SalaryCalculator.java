@@ -1,25 +1,28 @@
 package school.mjc.stage0.conditions.task3;
 
-import java.awt.*;
-import java.util.Scanner;
 
 public class SalaryCalculator {
     public void calculateSalary(int salary) {
 
-        if (salary <= 0){
+        if (salary < 0) {
             System.out.println("wrong input!");
-            return ;
+            return;
         }
-        double tax = 0;
-        if (salary <= 10000) {
-            tax = salary * 0.15;
-        } else if (salary <= 20000) {
-            tax = salary * 0.18;
+        double taxes;
+
+        if (salary <= 10000 && salary > 0) {
+            taxes = salary * 0.15;
+        } else if (salary <= 20000 && salary > 10000) {
+            taxes = salary * 0.18;
         } else {
-            tax = salary * 0.20;
+            taxes = salary * 0.20;
         }
-        double netSalary = salary - tax;
-        System.out.println(netSalary);
+
+        // Calculate the net salary
+        double netSalary = salary - taxes;
+
+        // Print the net salary
+        System.out.println("Net salary: " + netSalary);
     }
 }
 
